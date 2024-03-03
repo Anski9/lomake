@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Javascript harjoittelu</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <form id="myForm" action="">
+                <label for="fullname">Full name</label>
+                <input type="text" id="fullname" size="60" maxlength="80" autofocus required placeholder="Firstname Lastname"><br>
+
+                <label for="password1">Password</label>
+                <input type="password" size="20" id="password1" name="password1" required pattern="[a-zA-Z0-9_.\-:;?!]{8,20}" 
+                title="Password must be 8-20 characters long and include a-z, A-Z, 0-9, and _,.-:;?!"><br>
+
+                <label for="password2">Password repeated</label>
+                <input type="password" size="20" id="password2" name="password2" required pattern="[a-zA-Z0-9_.\-:;?!]{8,20}"><br>
+
+                <label for="gender">Gender</label>
+                <div>
+                    <input type="radio" name="gender" value="male" id="gender" required><label for="gender">male</label>
+                    <input type="radio" name="gender" value="female" id="female"><label for="female">female</label>
+                    <input type="radio" name="gender" value="other" id="other"><label for="other">other</label>
+                </div>
+                <br>
+
+                <label for="hobbies">Hobbies</label>
+                <div>
+                    <input type="checkbox" name="hobbies" value="games" id="hobbies"><label for="hobbies">games</label>
+                    <input type="checkbox" name="hobbies" value="music" id="music"><label for="music">music</label>
+                    <input type="checkbox" name="hobbies" value="sports" id="sports"><label for="sports">sports</label>
+                    <input type="checkbox" name="hobbies" value="tv" id="tv"><label for="tv">TV</label>
+                </div>
+                <br>
+                <label for="birthdate">Birth date</label>
+                <input type="date" id="birthdate" required><br>
+
+                <label for="heightRange">Height (cm)</label>
+                <div>
+                    <input type="range" id="heightRange" min="40" max="300" value="170">
+                    <input type="number" id="heightNumber" min="40" max="300" value="170">
+                </div>
+                <br>
+                <label for="color">Favorite color</label>
+                <input type="color" id="color"><br>
+
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option value="Finland" selected>Finland</option>
+                    <option value="Russia">Russia</option>
+                    <optgroup label="Scandinavia">
+                        <option value="Denmark">Denmark</option>
+                        <option value="Norway">Norway</option>
+                        <option value="Sweden">Sweden</option>
+                    </optgroup>
+                    <optgroup label="Baltic">
+                        <option value="Estonia">Estonia</option>
+                        <option value="Latvia">Latvia</option>
+                        <option value="Lithuania">Lithuania</option>
+                    </optgroup>
+                </select>
+                <br>
+                <label for="profession">Profession</label>
+                <input list="professions" id="profession" name="profession" required>
+                <datalist id="professions">
+                    <option value="laborant"></option>
+                    <option value="chemist"></option>
+                    <option value="microbiologist"></option>
+                    <option value="scientist"></option>
+                </datalist>
+                <br>
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="6" cols="60"
+                maxlength="1000" placeholder="Type here your message. Max 1000 characters." required></textarea>
+                <br>
+
+                <button id="sendButton">Send</button><br>
+                <label for="result">Result:</label>
+                <output id="result" class="result-output"></output>
+            </form>
+        </div>
+    </body>
+
+</html>
